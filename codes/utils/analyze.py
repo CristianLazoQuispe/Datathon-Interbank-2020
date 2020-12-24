@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+#create feature with range onehotencoding labelencoding
 def feature_range(datasets,column,bins=None,n_bins = 10,onehot=False):
     # datasets is a list of dataframes  datasets = [df1,df2]
     if bins is None:
@@ -45,7 +45,7 @@ def reduce_mem_usage(df):
     for col in df.columns:
         col_type = df[col].dtype
         
-        if col_type != object:
+        if col_type != object and col_type != '<M8[ns]' and col_type != bool:
             c_min = df[col].min()
             c_max = df[col].max()
             if str(col_type)[:3] == 'int':

@@ -1,5 +1,7 @@
 resources/data/
+resources/nydata/
 plantillas/
+
 .ipynb_checkpoints/
 *.ipynb_checkpoints/
 *__pycache__/
